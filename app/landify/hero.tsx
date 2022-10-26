@@ -68,7 +68,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="z-10 mx-auto flex w-full max-w-[1080px] flex-col space-y-8">
-        <h1 className="flex max-w-2xl flex-col space-y-1 text-7xl font-black">
+        <h1 className="flex max-w-2xl flex-col space-y-1 text-7xl font-bold">
           {hero_content?.title &&
             hero_content?.title.map((item, i) => <span key={i}>{item}</span>)}
         </h1>

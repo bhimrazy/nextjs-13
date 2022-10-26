@@ -13,7 +13,7 @@ export default function Header() {
       <nav className="mx-auto flex max-w-6xl flex-row items-center justify-between py-4">
         {/* Logo */}
         <Link href="/" className="relative">
-          <span className="text-2xl font-black">{header_content?.logo}</span>
+          <span className="text-2xl font-bold">{header_content?.logo}</span>
           <span className="absolute -right-2 top-0 text-[8px]">TM</span>
         </Link>
         {/* Nav Items */}
