@@ -7,7 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-
+      animation: {
+        blob: "spin 7s infinite",
+        plug: "ping 7s infinite",
+      },
     },
   },
   plugins: [],
