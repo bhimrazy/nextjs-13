@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header className="z-20 bg-gradient-to-b from-white to-yellow-50/50 ">
       {/* Nav Bar */}
-      <nav className="mx-auto flex max-w-6xl flex-row items-center justify-between py-4">
+      <nav className="mx-auto flex max-w-6xl flex-row items-center justify-between p-4">
         {/* Logo */}
         <Link href="/" className="relative">
           <span className="text-2xl font-bold">{header_content?.logo}</span>
@@ -18,7 +18,7 @@ export default function Header() {
         </Link>
         {/* Nav Items */}
         <div className="flex flex-row space-x-8 transition">
-          <ul className="flex flex-row space-x-6 font-medium">
+          <ul className="hidden flex-row space-x-6 font-medium sm:flex">
             {header_content?.nav_items &&
               header_content?.nav_items.map((item, i) => (
                 <li

@@ -11,7 +11,7 @@ export default function Hero() {
     play_button: "View Demo",
   };
   return (
-    <section className="relative flex min-h-full w-full flex-col place-content-center">
+    <section className="relative flex min-h-full w-full flex-col  place-content-center px-4">
       {/* Patterns */}
       <div className="absolute right-0 flex min-h-full w-1/4 flex-col justify-center bg-black">
         {/* right patterns */}
@@ -20,7 +20,7 @@ export default function Hero() {
           <div className="animation-delay-2000 absolute -right-1/4 top-1/4 h-16 w-[40rem] rotate-45 animate-plug  overflow-clip bg-amber-200 opacity-40 blur-[80px] "></div>
         </div>
         {/* Circle */}
-        <div className="absolute -left-1/2 aspect-square h-[26rem] rounded-full bg-gradient-to-b from-yellow-100 to-amber-300">
+        <div className="absolute -left-full aspect-square h-[26rem] rounded-full bg-gradient-to-b from-yellow-100 to-amber-300 lg:-left-1/2">
           {/* pop buttons */}
           <div className="absolute -top-2 -left-[55%]">
             <svg
@@ -49,7 +49,7 @@ export default function Hero() {
               Bring your Ideas to life
             </span>
           </div>
-          <div className="absolute bottom-1/4 -right-1/4 z-10 flex cursor-pointer flex-col rounded-xl bg-white px-10 py-4 text-center transition hover:-translate-y-1 hover:shadow-md">
+          <div className="absolute bottom-1/4 -right-16 z-10 flex cursor-pointer flex-col rounded-xl bg-white px-10 py-4 text-center transition hover:-translate-y-1 hover:shadow-md xl:-right-1/4">
             <span className="text-5xl font-bold text-black">40%</span>
             <span className="text-base text-gray-600">Market</span>
           </div>
@@ -68,11 +68,11 @@ export default function Hero() {
 
       {/* Content */}
       <div className="z-10 mx-auto flex w-full max-w-[1080px] flex-col space-y-8">
-        <h1 className="flex max-w-2xl flex-col space-y-1 text-7xl font-bold">
+        <h1 className="flex max-w-2xl flex-col space-y-1 text-4xl font-bold sm:text-5xl xl:text-7xl">
           {hero_content?.title &&
             hero_content?.title.map((item, i) => <span key={i}>{item}</span>)}
         </h1>
-        <p className="max-w-2xl text-xl text-gray-600">
+        <p className="max-w-lg text-lg text-gray-600 xl:max-w-2xl xl:text-xl">
           {hero_content?.description}
         </p>
         {/* Buttons */}
