@@ -17,31 +17,28 @@ export default function page() {
     },
   ];
   return (
-    <div className="flex flex-col h-full w-full items-center justify-center">
-      <main className="flex flex-col min-h-screen place-content-center w-full max-w-3xl">
+    <div className="flex h-full w-full flex-col items-center justify-center">
+      <main className="flex min-h-screen w-full max-w-3xl flex-col place-content-center">
         <section className="flex flex-col gap-6">
           {blog_content &&
             blog_content.map((blog, i) => (
               <article
                 key={i}
-                className="grid grid-cols-1 lg:grid-cols-3 bg-white rounded-md space-y-4 p-6 shadow-sm hover:shadow-md transition cursor-pointer"
+                className="grid cursor-pointer grid-cols-1 space-y-4 rounded-md bg-white p-6 shadow-sm transition hover:shadow-md lg:grid-cols-3"
               >
-                <div className="h-40 w-40 bg-slate-200 rounded-md overflow-hidden">
-                  <img
+                <div className="relative h-40 w-40 overflow-hidden rounded-md bg-slate-200">
+                  <Image
                     src={blog?.thumbnail}
                     alt={blog?.title}
-                    className="h-full w-full"
-                    loading="eager"
-                    // fill={true}
-                    // width={500}
-                    // height={500}
-                    // blurDataURL={blog?.thumbnail}
-                    // placeholder="blur"
+                    className=" object-cover "
+                    blurDataURL={blog?.thumbnail}
+                    placeholder="blur"
+                    fill
                   />
                 </div>
-                <div className="lg:col-span-2 space-y-2">
+                <div className="space-y-2 lg:col-span-2">
                   <h1 className="text-xl font-bold">{blog?.title}</h1>
-                  <p className="text-gray-600 text-normal">
+                  <p className="text-normal text-gray-600">
                     {blog?.description}
                   </p>
                 </div>
