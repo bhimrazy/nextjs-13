@@ -15,6 +15,9 @@ module.exports = {
         blob: "spin 7s infinite",
         plug: "ping 7s infinite",
       },
+      colors: {
+        "dark-blue": '#001561',
+      }
     },
   },
   plugins: [],

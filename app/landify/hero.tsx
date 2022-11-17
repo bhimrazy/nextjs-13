@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-full w-full flex-col  place-content-center px-4">
       {/* Patterns */}
-      <div className="absolute right-0 flex min-h-full w-1/4 flex-col justify-center bg-black">
+      <div className="absolute right-0 hidden min-h-full w-1/4 flex-col justify-center bg-black lg:flex">
         {/* right patterns */}
         <div className="absolute h-full w-full overflow-clip">
           <div className="animation-delay-4000 absolute -right-1/4 top-1/4 h-16 w-[40rem] animate-blob overflow-clip bg-purple-400 opacity-40 blur-[80px] "></div>
