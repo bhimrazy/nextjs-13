@@ -24,7 +24,7 @@ export default function Header() {
     ],
   };
   return (
-    <header className="sticky top-0 w-full bg-white py-6 shadow-sm">
+    <header className="sticky top-0 w-full bg-white py-6 shadow-sm z-20">
       <nav className="mx-auto flex max-w-7xl flex-row items-center justify-between px-8">
         {/* Logo */}
         <Image
