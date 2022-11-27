@@ -1,7 +1,11 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-export default function Menu({ menu }: { menu: Boolean }) {
+type Props = {
+  menu: Boolean;
+};
+
+export default function Menu({ menu }: Props) {
   const menus = [
     {
       title: "Home",
@@ -20,11 +24,6 @@ export default function Menu({ menu }: { menu: Boolean }) {
     { title: "Login" },
     { title: "Sign Up" },
   ];
-  const variants = {
-    open: { opacity: 1, x: 0 },
-    closed: { opacity: 0, x: "-100%" },
-  };
-
   return (
     <AnimatePresence>
       {menu && (
@@ -32,16 +31,15 @@ export default function Menu({ menu }: { menu: Boolean }) {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.9 }}
-          className="absolute top-full w-full bg-white pt-2 shadow sm:hidden"
+          className="absolute top-full w-full bg-white shadow sm:hidden"
         >
-          {/* Nav Menus */}
-          <ul className="flex flex-col divide-y divide-gray-100 text-center">
+          <ul className="flex flex-col divide-y divide-gray-100 text-center ">
             {menus &&
               menus.map((item, i) => (
                 <li
                   className={`${
-                    item?.active ? "text-blue-600" : "text-black"
-                  } cursor-pointer py-4 transition hover:text-blue-600`}
+                    item?.active ? "text-blue-600" : "text-gray-600"
+                  } py-4 transition hover:text-blue-500 `}
                   key={i}
                 >
                   {item?.title}

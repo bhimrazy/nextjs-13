@@ -1,5 +1,7 @@
+import Cards from "./Cards";
 import Header from "./Header";
 import Hero from "./Hero";
+import Tsp from "./Tsp";
 
 export default function TspPilot() {
   return (
@@ -8,6 +10,8 @@ export default function TspPilot() {
 
       <main className="flex flex-col">
         <Hero />
+        <Tsp />
+        <Cards/>
       </main>
     </div>
   );

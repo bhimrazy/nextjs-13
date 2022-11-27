@@ -24,7 +24,7 @@ export default function Header() {
     ],
   };
   return (
-    <header className="relative w-full bg-white py-6">
+    <header className="sticky top-0 w-full bg-white py-6 shadow-sm">
       <nav className="mx-auto flex max-w-7xl flex-row items-center justify-between px-8">
         {/* Logo */}
         <Image
@@ -64,16 +64,14 @@ export default function Header() {
             {menu ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
+                fill="currentColor"
                 className="h-6 w-6"
               >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
+                  fillRule="evenodd"
+                  d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                  clipRule="evenodd"
                 />
               </svg>
             ) : (
